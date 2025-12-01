@@ -78,8 +78,9 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   /**
    * Register new user
+   * Default role is pharmacist (id 1)
    */
-  const register = async (name: string, email: string, password: string, role: string = 'supplier') => {
+  const register = async (name: string, email: string, password: string, role: string = 'pharmacist') => {
     try {
       const response = await authAPI.post('/auth/register', { name, email, password, role });
       const { user: userData, token: newToken } = response.data.data;
@@ -122,5 +123,4 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
-
 
