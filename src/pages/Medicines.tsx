@@ -67,7 +67,7 @@ const Medicines: React.FC = () => {
    * Check if user can edit medicines (admin, pharmacist, or staff)
    * Staff can also add medicines to the inventory
    */
-  const canEdit = user?.role === 'admin' || user?.role === 'pharmacist' || user?.role === 'staff';
+  const canEdit = user?.role === 'admin' || user?.role === 'pharmacist' || user?.role === 'supplier';
 
   /**
    * Handle edit medicine - open form with existing data
@@ -311,4 +311,5 @@ const Medicines: React.FC = () => {
 };
 
 export default Medicines;
+
 
