@@ -14,7 +14,7 @@ const Signup: React.FC = () => {
     email: '',
     password: '',
     confirmPassword: '',
-    role: 'supplier' as 'admin' | 'pharmacist' | 'supplier',
+    role: 'pharmacist' as 'admin' | 'pharmacist' | 'supplier',
   });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -120,8 +120,8 @@ const Signup: React.FC = () => {
                 className="input-field"
               >
                 <option value="pharmacist">Pharmacist</option>
-                <option value="staff">Supplier</option>
                 <option value="admin">Admin</option>
+                <option value="supplier">Supplier</option>
               </select>
             </div>
 
@@ -177,6 +177,4 @@ const Signup: React.FC = () => {
 };
 
 export default Signup;
-
-
 
