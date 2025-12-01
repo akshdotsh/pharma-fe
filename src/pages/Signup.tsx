@@ -119,7 +119,7 @@ const Signup: React.FC = () => {
                 onChange={(e) => setFormData({ ...formData, role: e.target.value as any })}
                 className="input-field"
               >
-                <option value="staff">Staff</option>
+                <option value="supplier">Supplier</option>
                 <option value="pharmacist">Pharmacist</option>
                 <option value="admin">Admin</option>
               </select>
@@ -177,5 +177,4 @@ const Signup: React.FC = () => {
 };
 
 export default Signup;
-
 
