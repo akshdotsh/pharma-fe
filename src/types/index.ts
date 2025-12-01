@@ -7,7 +7,7 @@ export interface User {
   id: string;
   name: string;
   email: string;
-  role: 'admin' | 'pharmacist' | 'staff';
+  role: 'admin' | 'pharmacist' | 'supplier';
   isActive: boolean;
   createdAt?: string;
 }
@@ -94,4 +94,5 @@ export interface PaginationData {
   total: number;
   pages: number;
 }
+
 
